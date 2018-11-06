@@ -1,0 +1,28 @@
+{
+  "name": "decor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "find build -name 'rollup*.js' -exec rollup -c '{}' \\;",
+    "benchmark": "npm run benchmark:creation && npm run benchmark:memory",
+    "benchmark:creation": "node benchmark/creation.js",
+    "benchmark:memory": "node benchmark/memory.plain.js && node benchmark/memory.decorated.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "rollup": "^0.66.6",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-terser": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.17.2",
+    "typescript": "^3.0.0",
+    "vue": "^2.5.16",
+    "vue-property-decorator": "^7.0.0",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "dependencies": {}
+}
